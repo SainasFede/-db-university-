@@ -1,0 +1,37 @@
+1) 	SELECT `name`, `date_of_birth`
+	FROM `students`
+	WHERE `date_of_birth` LIKE '1990%';
+
+
+2)	SELECT `name`, `cfu`
+	FROM `courses`
+	WHERE `cfu` > '10';
+
+
+3)	SELECT `name`, `date_of_birth`
+	FROM `students`
+	WHERE YEAR(date_of_birth) < YEAR(NOW()) - 30;
+
+
+4) 	SELECT `name`, `period`, `year`
+	FROM `courses`
+	WHERE `period` = 'I semestre' AND `year` = '1';
+
+
+5)	SELECT `id`, `hour`, `date`
+	FROM `exams`
+	WHERE `date` = '2020-06-20' AND `hour` >= '14:00:00';
+
+
+6)	SELECT `name`, `level`
+	FROM `degrees`
+	WHERE `level` = 'magistrale';
+
+
+7)	SELECT COUNT(id) as departments
+	FROM `departments`;
+
+
+8)	SELECT COUNT(id) as teacher_without_number
+	FROM `teachers`
+	WHERE `phone` is NULL;
