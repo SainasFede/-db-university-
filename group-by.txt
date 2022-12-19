@@ -1,0 +1,15 @@
+1)	SELECT COUNT(id) AS `num_iscrizioni`, `enrolment_date`
+	FROM `students`
+	GROUP BY `enrolment_date`;
+
+2)	SELECT COUNT(id) AS `professori_per_ufficio`, `office_address`
+	FROM `teachers`
+	GROUP BY `office_address`;
+
+3)	SELECT COUNT(`exam_id`) AS `appello`, AVG(`vote`) AS `media_voto`
+	FROM `exam_student`
+	GROUP BY `exam_id`;
+
+4)	SELECT COUNT(`id`) AS `totale`, `department_id` AS `Dipartimenti`
+	FROM `degrees`
+	GROUP BY `department_id`;
