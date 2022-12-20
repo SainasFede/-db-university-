@@ -1,12 +1,12 @@
 1)	SELECT COUNT(id) AS `num_iscrizioni`, `enrolment_date`
 	FROM `students`
-	GROUP BY `enrolment_date`;
+	GROUP BY YEAR(`enrolment_date`);
 
 2)	SELECT COUNT(id) AS `professori_per_ufficio`, `office_address`
 	FROM `teachers`
 	GROUP BY `office_address`;
 
-3)	SELECT COUNT(`exam_id`) AS `appello`, AVG(`vote`) AS `media_voto`
+3)	SELECT `exam_id` AS `appello`, AVG(`vote`) AS `media_voto`
 	FROM `exam_student`
 	GROUP BY `exam_id`;
 
